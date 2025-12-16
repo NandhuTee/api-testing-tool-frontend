@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 const METHODS = ["GET", "POST", "PUT", "DELETE", "PATCH"];
-const BACKEND_URL = "http://localhost:5000"; // change if needed
+ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+; // change if needed
 const COLLECTIONS_STORAGE_KEY = "api_tester_collections_v1";
 
 function App() {
